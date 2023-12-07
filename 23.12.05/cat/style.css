@@ -1,0 +1,50 @@
+/* UA Reset */
+body {
+    margin: 0; /* margin의 초기값으로 셋팅 */
+}
+
+body {
+    background-image: url(./images/bg3.png);
+}
+
+h1 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+h1 {
+    font-size: 40px;
+    border-bottom: 10px solid orange;
+    background-color: beige;
+    margin: 0 auto 40px;
+    padding: 0 10px;
+    display: inline-block;
+}  
+
+p {
+    text-align: left;
+    background-color: seashell;
+    border: 1px solid rgb(0 0 0 / 1 );
+    border-radius: 10px;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+
+div {
+    text-align: center;
+    background-color: white;
+    width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    border-width: 0 0 20px 0;
+    border-style: solid;
+    border-color: brown;
+    color: inherit;
+}

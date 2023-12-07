@@ -1,0 +1,38 @@
+:root {
+	font-family: 'arial';
+}
+
+body {
+	background-image: url(images/background.gif);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+div {
+	color: white;
+	margin: 50px auto 0 auto;
+	text-align: center;
+	background-image: url(images/cover04.png);
+	width: 600px;
+	border-radius: 10px;
+	padding: 20px 50px;
+}
+
+img {
+	border: 5px solid;
+	width: 150px;
+	border-radius: 50% / 20%;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h1::after {
+	content: '';
+	display: block;
+	margin: 0 auto;
+	border-bottom: 4px solid;
+	width: 280px;
+}
