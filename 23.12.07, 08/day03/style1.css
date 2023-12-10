@@ -34,13 +34,9 @@ header {
 }
 
 .contents {
-    border: 40px solid;
+    border: 20px solid lavender;
     padding: 10px;
-    background-color: gray;
-}
-
-footer {
-    background: orange;
+    background-color: white;
 }
 
 .profile {
@@ -54,9 +50,55 @@ h1 {
     font-weight: bold;
 }
 
-p {
+header p {
     margin: 0 auto;
     width: fit-content;
     border-top: 4px solid;
     padding: 20px 0;
+}
+
+ul {
+    border-left: 4px solid gray;
+    padding-left: 10px;
+}
+
+li {
+    line-height: 1.5;
+    list-style: none;
+    color: gray;
+}
+
+.contentsimg {
+    float: right;
+}
+
+.contentsimg:hover {
+    background-color: black;
+}
+
+footer {
+    border: 20px solid lavender;
+    padding: 10px;
+    background-color: white;
+}
+
+.footerimg {
+    float: right;
+}
+
+.footerimg:hover {
+    background-color: black;
+}
+
+.finish {
+    width: inherit;
+    display: inline-block;
+    background-color: white;
+    
+}
+
+.finish p {
+    text-align: center;
+    color: gray;
+    letter-spacing: 0.2em;
 }
