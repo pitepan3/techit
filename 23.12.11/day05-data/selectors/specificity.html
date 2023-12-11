@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title>CSS Basic Test</title>
+        <style>
+			.wow.wow2 {
+				background-color: red;
+			}
+
+			.wow.wow {
+				background-color: blueviolet;
+			}
+
+			.wow:hover {
+				background-color: orangered;
+			}
+
+			h1 {
+				background-color: orange;
+			}
+
+			.wow {
+				background-color: purple !important;
+			}
+
+			h1 { /* !important 우선숸위를 주지만 !important가 어려개면
+				그 중에서 Selector Specificity를 따진다 
+				우선순위를 따져 적용시켜주는것을 케스케이딩 */
+				background-color: blue !important;
+			}
+        </style>
+	</head>
+	<body>
+
+        <h1 class="wow wow2">Do My Best!</h1>
+       
+	</body>
+</html>
