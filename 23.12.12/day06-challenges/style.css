@@ -7,6 +7,21 @@ body {
 	background-image: url(images/bg.png);
 }
 
+h1 {
+	margin: unset;
+}
+
+main h1 {
+	color: blue;
+	font-weight: bold;
+}
+
+main p {
+	font-size: small;
+	line-height: 1.7;
+	color: gray;
+}
+
 ul {
 	line-height: 3;
 	padding-left: 0;
@@ -58,26 +73,29 @@ li:hover {
 	padding: 40px;
 	background-image: url(images/trophy.png);
 	background-repeat: no-repeat;
-	background-size: 200px;
+	background-size: 180px;
 	background-position: 90% 80%;
 }
 
-a::after {
-	content: "";
+a {
 	display: inline-block;
 	width: 50px;
 	height: 50px;
 	background-image: url(images/sprite-btn.png);
 	border-radius: 50px;
-	background-color: gray;
-	text-indent: -9999px;
+	background-color: silver;
+	margin-top: 10px;
 }
 
-.sprite1::after {
+.sprite1 {
 	background-position: -50px;
 }
 
-.sprite2::after {
+.sprite2 {
 	background-position: -100px;
 }
 
+a:hover {
+	opacity: 0.5;
+	transition: 0.5s;
+}
