@@ -11,11 +11,19 @@
 				border: 10px solid maroon;
 				width: 980px;
 				margin: 200px auto;
-				border-radius: 24px;
+				border-radius: 20px;
 				background-color: skyblue;
+				padding: 10px;
 				display: flex;
 				/* inline-block: 당사자에게
 				   flex는 직계부모에게 */
+				flex-wrap: wrap;
+				/* flex-wrap: wrap; 크기를 유지하고, 줄바꿈이된다 */
+				justify-content: center;
+				/* justify-content: start, center, end 
+				   flex-container가 어디부터 시작할지 정한다*/
+				align-items: stretch;
+				height: 400px;
 			}
 
 			.frog { /* Flex Items */
@@ -23,21 +31,19 @@
 				color: lime;
 				font-size: 40px;
 				border: 6px solid green;
-				margin: 10px;
 				border-radius: 10px;
-
+				min-width: auto;
 				flex-basis: 200px;
 				/* flex-basis: 기본값: 0, 컨텐츠 크기만큼 맞춰진다 */
 				/* flex-grow 초기값: 0, 의미: 사용가능한 공간을 입력 비율로 나눠갖는다
 				flex-grow: 1; : 비율 => 1:1:1.... */
-				
-				flex-shrink: 1;
 				/* flex-shrink: 초기값: 1, 공간이 부족해서 줄어들어야할 때
 				각 컨텐츠가 줄어드는 비율 */
 			}
 			
-			.frog.son { /* son을 제외한 다른 컨텐츠들이 같은 비율로 줄어든다 */
-				flex-shrink: 0;
+			.frog.disco {
+				margin-top: auto;
+				background-color: orangered;
 			}
 
 		</style>
@@ -48,8 +54,7 @@
 			<div class="frog"><img src="images/frog.png"></div>
 			<div class="frog"><img src="images/frog-3d.png"></div>
 			<div class="frog"><img src="images/frog-3d.png"></div>
-			<div class="frog"><img src="images/frog-3d.png"></div>
-			<div class="frog son"><img src="images/frog-disco.png"></div>
+			<div class="frog disco"><img src="images/frog-disco.png"></div>
 		</div>
 
 	</body>
