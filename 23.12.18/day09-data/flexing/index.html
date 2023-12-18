@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flexing</title>
+        <style>
+            body {
+                background-color: brown;
+            }
+            .playground {
+                border: 10px solid maroon;
+                width: 980px;
+                margin: 0 auto;
+                border-radius: 30px;
+                background-color: skyblue;
+                padding: 10px;
+                display: flex;
+								gap: 10px;
+            }
+            .frog {
+                background-color: mediumseagreen;
+                color: lime;
+                font-size: 40px;
+                border: 6px solid green;
+                border-radius: 10px;
+
+								flex-shrink: 1; /* initial value */	
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="playground">
+            <div class="frog">Frog</div>
+						<!--
+            <div class="frog">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scram</div>
+            <div class="frog">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the und</div>
+						-->
+        </div>
+
+    </body>
+</html>

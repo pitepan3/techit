@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+    margin: 0;
+    font-family: "Montserrat";
+    background-color: #eee;
+}
+
+h2 {
+    margin: 0;
+}
+
+
+/* ============================================================ */
+
+.title {
+    box-shadow: inset 0 0 20px black;
+    display: flex;
+    height: 400px;
+    background-image: url(images/insideout-bg.png);
+    background-size: cover;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.title h1 {
+    background-color: red;
+    color: white;
+    margin: auto;
+    padding: 20px;
+    width: 860px;
+    font-size: 120px;
+    font-weight: 900;
+}
+
+/*==========================header==========================*/
+
+/*==========================joy==========================*/
+
+.wrapper {
+    width: 900px;
+    margin: 50px auto;
+}
+
+.section-joy {
+    background-color: white;
+    display: flex;
+    padding: 40px;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    
+}
+
+.section-image {
+    display: block;
+    vertical-align: top;
+    height: 250px;
+    width: 250px;
+}
+
+.section-header {
+    font-weight: 900;
+    color: orange;
+}
+
+.section-contents {
+    display: flex;
+    font-size: 14px;
+    font-weight: 200;
+    gap: 40px;
+    line-height: 1.6;
+    color: gray;
+}
+
+.hr-joy {
+    margin: 0px 0px 20px auto;
+    width: 50px;
+    height: 8px;
+    background-color: orangered;
+    border-radius: 10px;
+}
+
+/*==========================joy==========================*/
+
+/*==========================sadness==========================*/
+
+.section-header-sadness {
+    font-weight: 900;
+    color: blue;
+}
+
+.hr-sadness {
+    margin: 0 auto 20px 0;
+    width: 120px;
+    height: 8px;
+    background-color: skyblue;
+    border-radius: 10px;
+}
+
+.section-joy:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+/*==========================sadness==========================*/
+
+/*==========================anger==========================*/
+
+.section-header-anger {
+    font-weight: 900;
+    color: red;
+}
+
+.hr-anger {
+    margin: 0 0 20px auto;
+    width: 90px;
+    height: 8px;
+    background-color: gold;
+    border-radius: 10px;
+}
+
+/*==========================anger==========================*/
+
+
