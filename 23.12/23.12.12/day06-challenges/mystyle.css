@@ -1,0 +1,101 @@
+:root {
+	font-family: 'arial';
+}
+
+body {
+	margin: unset;
+	background-image: url(images/bg.png);
+}
+
+h1 {
+	margin: unset;
+}
+
+main h1 {
+	color: blue;
+	font-weight: bold;
+}
+
+main p {
+	font-size: small;
+	line-height: 1.7;
+	color: gray;
+}
+
+.sidebar ul {
+	line-height: 3;
+	padding-left: 0;
+}
+
+.sidebar li {
+	border-left: 8px solid #181818;
+	text-indent: 20px;
+	text-align: left;
+	background-color: black;
+	color: gray;
+	list-style: none;
+}
+
+li:hover {
+	background-color: dimgray;
+	color: white;
+	border-left: 8px solid aqua;
+	transition: 0.5s;
+}
+
+.container {
+	width: 800px;
+	margin: 50px auto;
+	display: flex;
+	height: 400px;
+}
+
+.sidebar {
+	text-align: center;
+	background-image: url(images/profile-bg.png);
+	background-repeat: no-repeat;
+	background-size: 200px; 
+	background-color: #181818;
+	flex-basis: 200px;
+	flex-shrink: 0; /* sidebar의 공간을 보장시켜준다(줄어들지 않는다) */
+}
+
+.sidebar .profile {
+	margin-top: 20px;
+	border-radius: 50%;
+	border: 4px solid white;
+}
+
+.container .main {
+	background-color: white;
+	flex-basis: auto;
+	flex-grow: 1;
+	padding: 40px;
+	background-image: url(images/trophy.png);
+	background-repeat: no-repeat;
+	background-size: 180px;
+	background-position: 90% 80%;
+}
+
+.main .sprite a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-image: url(images/sprite-btn.png);
+	border-radius: 50px;
+	background-color: silver;
+	margin-top: 10px;
+}
+
+.sprite1 {
+	background-position: -50px;
+}
+
+.sprite2 {
+	background-position: -100px;
+}
+
+a:hover {
+	opacity: 0.5;
+	transition: 0.5s;
+}

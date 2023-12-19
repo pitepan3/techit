@@ -1,0 +1,60 @@
+/* Reset */
+
+body, p {
+    margin: unset;
+}
+
+h1 {
+    font-size: unset;
+    font-weight: unset;
+    margin: unset;
+}
+
+img {
+    vertical-align: top; /* 이미지 하단공간 없애기 */
+}
+
+/* Typography */
+:root {
+    font-family: 'arial', 'impact', sans-serif;
+    line-height: 1.4;
+}
+
+
+
+
+/* Components */
+
+body {
+    background-image: url(images/bg.png);
+    display: flex;
+    align-items: center;
+    height: 100vh;/* 뷰포트 기준 높이 */
+}
+
+.animal {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.animal-description {
+    background-image: url(images/green.png);
+    background-repeat: no-repeat;
+    background-color: #9C6035;
+    color: #E8BC9C;
+    padding: 50px 20px 20px 20px;
+    min-height: 210px;
+    border-radius: 0 0 30px 30px;
+    border-bottom: 10px solid #46260E;
+}
+
+.animal-description h1 {
+    color: white;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.animal-description p {
+    
+}

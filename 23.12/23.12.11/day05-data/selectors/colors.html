@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <title>CSS Basic</title>
+        <style>
+            body {
+                background-color: #ddd;
+            }
+
+            .colors .item {
+                background-color: white;
+                padding: 40px;
+                margin: 40px;
+
+                border-left: 20px solid black;
+                color: black;
+            }
+
+            .colors .item.red { 
+                /* 구체적인 셀렉터인 .colors .item이 있기 때문에 우선순위가 밀려서 적용이 안된다.
+                마우스 커서 올리면 Selector Specificity( n, n, n )라는 우선순위 점수가
+                나오는데 높을수록 우선순위가 높아진다.(동점이면 나중에 적힌 코드가 우선순위가 된다)
+                ( 금, 은, 동 ) 타입셀렉터body 등 = 동, 클래스 = 은, id = 금*/
+                box-shadow: 0 0 200px red;
+                border-left-color: red;
+                color: red;
+            }
+
+            .green {
+                box-shadow: 0 0 200px green;
+            }
+        </style>
+	</head>
+	<body>
+
+        <div class="colors">
+            <div class="item red">RED</div>
+            <div class="item green">GREEN</div>
+            <div class="item blue">BLUE</div>
+            <div class="item orange">ORANGE</div>
+            <div class="item gray">GRAY</div>
+        </div>
+       
+	</body>
+</html>

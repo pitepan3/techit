@@ -1,0 +1,102 @@
+body {
+    margin: unset;
+}
+
+h1 {
+    font-size: inherit;
+    font-weight: unset;
+}
+
+h3 {
+    margin: unset;
+}
+
+/* ======================================= RESET ======================================= */
+
+body {
+    background-image: url(images/background.gif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    width: 800px;
+    margin: 80px auto;
+}
+
+.header {
+    padding: 80px;
+    color: white;
+    background-image: url(images/cover04.png);
+    background-size: cover;
+    text-align: center;
+}
+
+header p {
+    margin: 0 auto;
+    width: fit-content;
+    border-top: 4px solid;
+    padding: 20px 0;
+}
+
+.contents {
+    border: 20px solid lavender;
+    padding: 10px;
+    background-color: white;
+}
+
+.profile {
+    width: 100px;
+    border: 4px solid white;
+    border-radius: 50% / 20%;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+ul {
+    border-left: 4px solid gray;
+    padding-left: 10px;
+}
+
+li {
+    line-height: 1.5;
+    list-style: none;
+    color: gray;
+}
+
+.contentsimg {
+    float: right;
+}
+
+li:hover {
+    font-size: large;
+    color: red;
+    transition: 0.2s;
+}
+
+footer {
+    border: 20px solid lavender;
+    padding: 10px;
+    background-color: white;
+}
+
+.footerimg {
+    float: right;
+}
+
+.finish {
+    width: inherit;
+    display: inline-block;
+    background-color: white;
+    
+}
+
+.finish p {
+    text-align: center;
+    color: gray;
+    letter-spacing: 0.2em;
+}

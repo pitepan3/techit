@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@600&display=swap');
+/* Resets */
+body {
+    margin: unset;
+}
+
+h1, h2 {
+    margin: unset;
+    font-size: unset;
+    font-weight: unset;
+}
+
+p {
+    margin: unset;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* Typography */
+:root {
+    font-family: 'Oswald';
+}
+
+/* Layouts */
+.l_wrapper {
+    width: auto;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Components */
+.header {
+    padding: 100px 0;
+    background-image: url(images/cover02.png);
+    background-size: cover;
+}
+
+.header-title {
+    background-color: rgb ( 0 0 0 / .1 );
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.12em 0 0.2em;
+    border-radius: 12px;
+}
+
+.contents {
+    padding: 60px 0;
+    background-color: #ddd;
+}
+
+.section {
+    background-color: white;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    text-align: right;
+}
+
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+    text-align: left;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section-cover {
+    width: 240px;
+}
+
+.section-cover.type_bottom {
+    margin-top: auto;
+}
+
+.section-contents {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.section-title {
+    margin-bottom: 24px;
+    font-size: 40px;
+    font-weight: 600;
+    color: orange;
+    display: inline-block;
+}
+
+.section-title.type_orange        { color: orange; }
+.section-title.type_orange::after { background-color: salmon; }
+
+.section-title.type_blue          { color: dodgerblue; }
+.section-title.type_blue::after   { background-color: skyblue; }
+
+.section-title.type_red           { color: red; }
+.section-title.type_red::after    { background-color: yellow; }
+
+
+
+.section-title::after { 
+    /* sudo엘리먼트(가상 엘리먼트) html에 직접 입력하지않고 꾸밀수 있다*/
+    content: ' ';
+    background-color: salmon;
+    display: block;
+    height: 12px;
+    border-radius: 12px;
+}
+
+.section-description {
+    display: flex;
+    gap: 20px;
+    font-family: 'arial';
+    color: #999;
+    flex-wrap: wrap;
+}
+
+.section-description p {
+    flex-basis: 200px;
+    flex-grow: 1;
+    /* flex-basis: 0;, flex-grow: 1; 를 이용하여 크기가 다른 p의 크기를 맞춘다 */
+}
+
+@media ( max-width: 720px ) { /* 브라우저의 크기가 960px 이하일 때(라는 조건) */
+    /* Selector Specificity의 영향을 받는다!! */
+    .section.section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .section-cover.type_bottom {
+        order: 2; /* 밑으로 내리기 위해서 order: 2; */
+    }
+}

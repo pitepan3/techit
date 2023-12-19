@@ -1,0 +1,53 @@
+a {
+    text-decoration: unset;
+    color: unset;
+}
+
+.wrapper {
+    box-shadow: inset 0 0 20px red;
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    box-shadow: inset 0 0 30px blue;
+}
+
+.header a {
+    background-color: orange;
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    line-height: 210px; /* inline-block 박스 contents 수직중앙정렬 */
+    border-radius: 50%;
+}
+
+.header a.logo {
+    background-image: url(images/logo.png);
+    text-indent: -9999px; /* image Replacement = IR기법 */
+}
+
+.header a:hover {
+    text-indent: -9999px;
+}
+
+.header a.lemon:hover {
+    background-image: url(images/lemon.png);
+}
+
+.header a.orange:hover {
+    background-image: url(images/orange.png);
+}
+
+.header a.jamong:hover {
+    background-image: url(images/jamong.png);
+}
+
+.contents {
+    box-shadow: inset 0 0 30px blue;
+}
+
+.footer {
+    box-shadow: inset 0 0 30px blue;
+}

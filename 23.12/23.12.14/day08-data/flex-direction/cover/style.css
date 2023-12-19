@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+}
+body {
+    background-color: #111;
+}
+.cover {
+    background-color: #222;
+    color: white;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+
+
+    /* align-items: center; */
+    /* 직계자식이 img면 height600px에 맞춰서 비율이 커지기 때문에
+        align-items: stretch 기본값= 커진다 
+         align-items: center를 주면 그대로 유지된다. */
+}
+.cover-logo {
+    margin-top: auto;
+}
+.cover-desciption {
+    margin-bottom: auto;
+}

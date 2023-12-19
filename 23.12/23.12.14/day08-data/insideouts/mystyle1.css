@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+body {
+    font-family: "Montserrat";
+    margin: unset;
+    background-color: #eee;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+/* ================================================ */
+
+
+.header {
+    display: flex;
+    background-image: url(images/insideout-bg.png);
+    background-size: cover;
+    height: 400px;
+}
+
+.header .title {
+    margin: auto;
+    background-color: red;
+    color: white;
+    text-align: center;
+    width: 800px;
+    padding: 20px;
+    font-size: 120px;
+    font-weight:bold;
+}
+
+/* ==============================header============================ */
+
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.wrapper .joy-section {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 40px;
+    margin-top: 40px;
+    background-image: url(images/joy.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+}
+
+.joy-section .joy-headline {
+    text-align: right;
+    color: orange;
+    font-weight: 900;
+}
+
+.joy-headline hr {
+    margin-right: 0;
+    width: 44px;
+    height: 8px;
+    background-color: orangered;
+    border-radius: 10px;
+}
+
+.joy-section .joy-contents {
+    display: flex;
+    text-align: right;
+    padding-left: 200px;
+}
+
+.wrapper p {
+    line-height: 1.7;
+    width: 300px;
+    padding: 20px;
+    color: gray;
+    font-size: 14px;
+}
+
+/* ==============================joy========================= */
+
+.wrapper .sadness-section {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 40px;
+    margin-top: 40px;
+    background-image: url(images/sad.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-position: 100% 100%;
+}
+
+.sadness-section .sadness-headline {
+    text-align: left;
+    color: blue;
+    font-weight: 900;
+}
+
+.sadness-headline hr {
+    margin-left: 0;
+    width: 110px;
+    height: 8px;
+    background-color: skyblue;
+    border-radius: 10px;
+}
+
+.sadness-section .sadness-contents {
+    color: gray;
+    display: flex;
+    text-align: left;
+    padding-right: 200px;
+}
+
+/* ==========================SADNESS========================== */
+
+.wrapper .anger-section {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    padding: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-image: url(images/anger.png);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-position: 5% 100%;
+}
+
+.anger-section .anger-headline {
+    text-align: right;
+    color: orangered;
+    font-weight: 900;
+}
+
+.anger-headline hr {
+    margin-right: 0;
+    width: 80px;
+    height: 8px;
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.anger-section .anger-contents {
+    display: flex;
+    text-align: right;
+    padding-left: 200px;
+}
+
+/* =====================ANGER====================== */
