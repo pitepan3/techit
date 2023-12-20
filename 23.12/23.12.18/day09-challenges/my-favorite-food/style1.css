@@ -1,4 +1,3 @@
-
 /* Resets */
 body {
     margin: unset;
@@ -19,6 +18,7 @@ img {
 
 /* Typography */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+
 :root {
     font-family: 'arial';
 }
@@ -45,7 +45,6 @@ body {
 }
 
 .header-title {
-    /* box-shadow: inset 0 0 20px blue; */
     margin-right: auto;
     color: #F60;
     font-size: 24px;
@@ -53,7 +52,6 @@ body {
 }
 
 .header-img {
-    /* box-shadow: inset 0 0 20px red; */
     width: 124px;
 }
 
@@ -65,7 +63,6 @@ body {
 }
 
 .card {
-    /* box-shadow: inset 0 0 20px red; */
     min-width: 300px;
     flex-basis: 300px;
     border-radius: 12px;
@@ -131,16 +128,16 @@ body {
 }
 
 .card-cover.type_green {background-image: url(images/food02.png);}
-.card-cover.type_blue {background-image: url(images/food03.png);}
+.card-cover.type_blue  {background-image: url(images/food03.png);}
 
 .card-title.type_green {color: #17A651;}
-.card-title.type_blue {color: #0075FF;}
+.card-title.type_blue  {color: #0075FF;}
 
 .point.type_green {color: #17A651;}
-.point.type_blue {color: #0075FF;}
+.point.type_blue  {color: #0075FF;}
 
 .card-bottom.type_green p {background-color: #17A651;}
-.card-bottom.type_blue p {background-color: #0075FF;}
+.card-bottom.type_blue p  {background-color: #0075FF;}
 
 .footer {
     color: #AAA;
