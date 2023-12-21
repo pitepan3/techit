@@ -1,257 +1,137 @@
-/* reset */
-body {
+/* Resets */
+body, ul {
     margin: unset;
-    background-color: #D9D9D9;
+    padding: unset;
 }
 
-p {
-    margin: unset;
+li {
+    list-style-type: none;
 }
 
-h1 {
+a {
+    color: unset;
+    text-decoration: unset;
+}
+
+h1, h2 {
+    margin: unset;
     font-size: unset;
+    font-weight: unset;
 }
 
-/* components */
-
-/*  header */
-.wrapper {
-    height: 100vh;
-    /* position: relative; */
+img {
+    vertical-align: top;
 }
 
-.top {
+/* Layouts */
+.l_wrapper {
     width: auto;
-    background-color: #F4F4F4;
-    /* position: relative; */
-}
-
-.wrapper .header {
-    display: flex;
-    position: relative;
-    max-width: 960px;
-    width: auto;
-    height: 160px;
-    align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 0 20px;
 }
 
-.header .title {
-    color: orange;
-    font-size: 24px;
-}
-
-.header .title-img {
-    width: 124px;
-    height: 100px;
-    margin-left: auto;
-}
-
-.wrapper .main {
+.l_row {
     display: flex;
-    box-shadow: inset 0 0 20px red;
-}
-/*  header */
-
-/* main */
-
-.container {
-    display: flex;
-    width: 960px;
-    margin: 30px auto;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin: 0 -15px;
 }
 
-.container .section {
-    width: 300px;
-    box-shadow: 0 5px 5px gray;
-    border-radius: 12px;
-    overflow: hidden;
+.l_col {
+    width: 33.3333%;
+    padding: 0 15px; 
+    box-sizing: border-box;
 }
 
-.green {
-    margin: 0 30px 0 30px;
-}
-.section-header-orange {
-    height: 200px;
-    background-image: url(images/food01.png);
-    background-size: 300px;
-    display: flex;
+/* Components */
+body {
+    background-color: #ddd;
 }
 
-.section-header-green {
-    height: 200px;
-    background-image: url(images/food02.png);
-    background-size: 300px;
-    display: flex;
-}
-
-.section-header-blue {
-    height: 200px;
-    background-image: url(images/food03.png);
-    background-size: 300px;
-    display: flex;
-}
-
-.section .title-orange {
-    background: rgba(0, 0, 0, 0.80);
-    padding: 10px 20px 10px 20px;
-    margin-top: auto;
-    margin-bottom: 0;
-    color: #F60;
-    font-size: 24px;
-    border-radius: 0 12px 0 0;
-}
-
-.section .title-green {
-    background: rgba(0, 0, 0, 0.80);
-    padding: 10px 20px 10px 20px;
-    margin-top: auto;
-    margin-bottom: 0;
-    color: #17A651;
-    font-size: 24px;
-    border-radius: 0 12px 0 0;
-}
-
-.section .title-blue {
-    background: rgba(0, 0, 0, 0.80);
-    padding: 10px 20px 10px 20px;
-    margin-top: auto;
-    margin-bottom: 0;
-    color: #0075FF;
-    font-size: 24px;
-    border-radius: 0 12px 0 0;
-}
-
-.section-contents {
+.header {
     background-color: white;
-    color: #666;
 }
 
-.contents-orange {
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.6;
+.header-inside {
+    display: flex;
+    align-items: center;
+    min-height: 160px;
+    padding: 20px 0;
+    box-sizing: border-box;
 }
 
-.contents-green {
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.contents-blue {
-    padding: 20px;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.contents-orange::before {
-    content: 'Plain food ';
+.header-title {
+    flex-grow: 1;
     color: #F60;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.contents-green::before {
-    content: 'Shake Shakge Burger ';
-    color: #17A651;
-    font-weight: 700;
+.header-cover {
+    width: 130px;
 }
 
-.contents-blue::before {
-    content: 'Superior Pizza ';
-    color: #0075FF;
-    font-weight: 700;
+.contents {
+    padding: 30px 0;
 }
 
-.footer-orange {
-    background-color: #F4F4F4;
+.card {
+    background-color: white;
+    height: 100%;
     display: flex;
-    height: 54px;
-    align-items: center;
-    padding: 10px;
+    flex-direction: column;
 }
 
-.footer-green {
-    background-color: #F4F4F4;
-    display: flex;
-    height: 54px;
-    align-items: center;
-    padding: 10px;
+.card.type_red {
+    --accent-color: orangered;
 }
 
-.footer-blue {
-    background-color: #F4F4F4;
-    display: flex;
-    height: 54px;
-    align-items: center;
-    padding: 10px;
+.card.type_blue {
+    --accent-color: dodgerblue;
 }
 
-.footer-orange p {
-    font-size: 12px;
-    padding: 4px;
+.card.type_purple {
+    --accent-color: violet;
+}
+
+.card-cover {
+    position: relative;
+}
+
+.card-cover-src {
+    width: 100%;
+}
+
+.card-cover h2 {
+    background-color: #111;
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 0 12px 0 0;
+}
+
+.card-contents {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-footer {
+    padding: 20px;
+    background-color: #eee;
+}
+
+.tag {
+    background-color: var(--accent-color);
     color: white;
-    margin-left: 8px;
-    background-color: #F60;
-    border-radius: 20px;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
 }
 
-.footer-green p {
-    font-size: 12px;
-    padding: 4px;
-    color: white;
-    margin-left: 8px;
-    background-color: #17A651;
-    border-radius: 20px;
-}
-
-.footer-blue p {
-    font-size: 12px;
-    padding: 4px;
-    color: white;
-    margin-left: 8px;
-    background-color: #0075FF;
-    border-radius: 20px;
-}
-
-.finish {
-    width: 960px;
-    margin: 0 auto;
-    font-size: 12px;
-    color: #AAAAAA;
-    text-indent: 10px;
-}
-
-@media ( max-width: 750px ) { 
-    .container {
-        display: grid;
-        width: auto;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .section {
-        margin-bottom: 30px;
-        margin-left: 30px;
-    }
-
-    .wrapper.header {
-        /* max-width: 600px; */
-    }
-    .finish {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-    }
-}
-
-@media ( max-width: 650px ) { 
-    .container {
-        display: grid;
-        width: 350px;
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-    .section {
-        margin: 30px auto;
-    }
+.tag::before {
+    content: '#';
 }
