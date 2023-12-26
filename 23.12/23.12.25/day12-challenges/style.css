@@ -11,6 +11,10 @@ h1, p {
 }
 
 /* Components */
+body {
+    background-color: #111;
+}
+
 .header {
     min-height: 676px;
     background-image: url(images/cover.png);
@@ -49,7 +53,6 @@ h1, p {
 }
 
 .main {
-    background-color: #111;
     display: flex;
     height: 562px;
     line-height: 160%;
@@ -71,6 +74,8 @@ h1, p {
 
 .side {
     font-family: 'Arial';
+    margin-top: -60px;
+    position: relative;
 }
 
 .side-type {
