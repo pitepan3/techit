@@ -1,0 +1,196 @@
+/* Resets */
+body, p, ul {
+    margin: unset;
+    padding: unset;
+}
+
+h1, h2 {
+    margin: unset;
+    font-size: unset;
+    font-weight: unset;
+}
+
+li {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    color: unset;
+    text-decoration: unset;
+}
+
+/* Typography */
+:root {
+    font-family: "Monserat";
+}
+
+/* Variables */
+:root {
+    --gap: 20px;
+    --color-primary: salmon;
+    --color-primary-light: seashell;
+}
+
+/* Layouts */
+.l_row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    margin: 0 -10px;
+}
+
+.l_col {
+    width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.l_col_12_12 { width: 100%; }
+.l_col_11_12 { width: 91.66666667%; }
+.l_col_10_12 { width: 83.33333333%; }
+.l_col_9_12  { width: 75%; }
+.l_col_8_12  { width: 66.66666667%; }
+.l_col_7_12  { width: 58.33333333%; }
+.l_col_6_12  { width: 50%; }
+.l_col_5_12  { width: 41.66666667%; }
+.l_col_4_12  { width: 33.33333333%; }
+.l_col_3_12  { width: 25%; }
+.l_col_2_12  { width: 16.66666667%; }
+.l_col_1_12  { width: 8.33333333%; }
+
+/* Components */
+body {
+    background-color: var(--color-primary-light);
+}
+
+.header {
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    /* 비율을 유지한다 */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+}
+
+.header-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    /* background-image가 아닌 <img src>로 마크업을 했을 때 사이즈 조정 */
+    z-index: -1;
+}
+
+.header-title {
+    font-size: 60px;
+    font-weight: 700;
+    padding: var(--gap);
+    line-height: 1;
+    margin-bottom: -0.14em;
+}
+
+.contents {
+    padding: var(--gap);
+}
+
+.section {
+    background-color: white;
+    border: 1px solid var(--color-primary);
+    padding: var(--gap);
+    border-radius: 6px;
+}
+
+.section + .section {
+    margin-top: var(--gap);
+}
+
+.section-header {
+    margin-bottom: var(--gap);
+}
+
+.section-title {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-bottom: var(--gap);
+}
+
+.section-contents {
+}
+
+.section-footer {
+    margin-top: var(--gap);
+}
+
+.section-description {
+    color: #999;
+}
+
+.card {
+}
+
+.card img {
+    width: 100%;
+}
+
+.link {
+    background-color: orange;
+    color: #222;
+    font-weight: 700;
+    display: block;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.link::before {
+    content: " ";
+    width: 24px;
+    height: 24px;
+    background-image: url(images/icon-arrow.svg);
+}
+
+.link_prev {
+    flex-direction: row;
+}
+
+.link_next {
+    flex-direction: row-reverse;
+}
+
+.link_next::before {
+    transform: rotate(180deg);
+}
+@media ( min-width: 960px ) {
+    .l_col_desktop_12_12 { width: 100%; }
+    .l_col_desktop_11_12 { width: 91.66666667%; }
+    .l_col_desktop_10_12 { width: 83.33333333%; }
+    .l_col_desktop_9_12  { width: 75%; }
+    .l_col_desktop_8_12  { width: 66.66666667%; }
+    .l_col_desktop_7_12  { width: 58.33333333%; }
+    .l_col_desktop_6_12  { width: 50%; }
+    .l_col_desktop_5_12  { width: 41.66666667%; }
+    .l_col_desktop_4_12  { width: 33.33333333%; }
+    .l_col_desktop_3_12  { width: 25%; }
+    .l_col_desktop_2_12  { width: 16.66666667%; }
+    .l_col_desktop_1_12  { width: 8.33333333%; }
+
+    .header {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+    }
+
+    .contents {
+        margin-left: 50%;
+        max-width: 800px;
+    }
+}
