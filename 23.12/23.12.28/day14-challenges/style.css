@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Resets */
+body {
+    margin: unset;
+}
+
+h1, p {
+    margin: unset;
+    font-size: unset;
+    font-weight: unset;
+}
+
+
+
+/* Layouts */
+.l_wrapper {
+    box-shadow: inset 0 0 20px red;
+    width: 1080px;
+    height: 932px;
+    margin: 0 auto;
+    font-family: "Montserrat";
+}
+
+
+/* Components */
+.pg1 {
+    background-color: #6230A2;
+}
+
+.pg1-header {
+    box-shadow: inset 0 0 20px blue;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.pg1-header::before {
+    position: absolute;
+    left: 280px;
+    content: '';
+    width: 90px;
+    height: 1px;
+    background-color: #C89DFF;
+}
+
+.pg1-header-title {
+    color: #FFF;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1em;
+    width: 258px;
+    padding: 92px 0;
+}
+
+.pg1-header-title-type {
+    display: inline-block;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.pg1-header-title-type::after {
+    content: ' ';
+    background-color: #FF4500;
+    width: 100%;
+    height: 26px;
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.pg-header-title::after {
+    content: '23123';
+    
+}
+
+.pg1-header-title-sub {
+    color: #C89DFF;
+    font-size: 14px;
+    line-height: 1.2em;
+    width: 460px;
+    margin-left: 144px;
+}
