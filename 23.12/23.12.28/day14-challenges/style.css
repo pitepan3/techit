@@ -5,10 +5,20 @@ body {
     margin: unset;
 }
 
-h1, p {
+h1, h2, p, li {
     margin: unset;
     font-size: unset;
     font-weight: unset;
+}
+
+ul {
+    padding: unset;
+    margin: unset;
+    list-style-type: none;
+}
+
+img {
+    vertical-align: top;
 }
 
 
@@ -20,16 +30,17 @@ h1, p {
     height: 932px;
     margin: 0 auto;
     font-family: "Montserrat";
+    position: relative;
+    z-index: 1;
 }
 
-
+/* ============================== Page.1 ============================== */
 /* Components */
 .pg1 {
     background-color: #6230A2;
 }
 
 .pg1-header {
-    box-shadow: inset 0 0 20px blue;
     display: flex;
     align-items: center;
     position: relative;
@@ -63,7 +74,6 @@ h1, p {
 
 .pg1-header-title-type::after {
     content: ' ';
-    background-color: #FF4500;
     width: 100%;
     height: 26px;
     position: absolute;
@@ -71,11 +81,11 @@ h1, p {
     left: 0;
     bottom: 0;
     z-index: -1;
+    background-color: #FF4500;
 }
 
 .pg-header-title::after {
     content: '23123';
-    
 }
 
 .pg1-header-title-sub {
@@ -84,4 +94,106 @@ h1, p {
     line-height: 1.2em;
     width: 460px;
     margin-left: 144px;
+}
+
+.pg1-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.pg1-card {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.pg1-card-main {
+    background-color: #FFF;
+    width: 100%;
+}
+
+
+.pg1-card-cover {
+    position: relative;
+    color: #FFF;
+    z-index: -1;
+}
+
+.pg1-card-cover::after {
+    content: '';
+    background: rgba(98, 48, 162, 0.50);
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+}
+
+.pg1-card-cover-img {
+    width: 280px;
+    height: 148px;
+    object-fit: cover;
+}
+
+.pg1-card-cover-title {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 44px;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pg1-card-main-title {
+    color: #6230A2;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block;
+    padding: 16px 0 2px 20px;
+}
+
+.pg1-card-main-contents {
+    list-style-type: circle;
+    margin-left: 46px;
+}
+
+.pg1-card-main-contents li {
+    color: #111;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* ============================== Page.2 ============================== */
+.pg2 {
+    background-color: #FFF5ED;
+}
+
+.pg2-header {
+    box-shadow: inset 0 0 20px blue;
+    display: flex;
+    height: 282px;
+    width: 100%;
+    align-items: center;
+}
+
+.pg2-header-title {
+    color: #F98173;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1em;
+}
+
+.pg2-header-title-type {
+    display: block;
+    font-weight: 700;
+}
+
+.pg2-header-title-sub {
+    margin-left: auto;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 44px;
+    padding: 0 14px 0 14px;
+    background-color: #FF4500;
+    border-radius: 4px;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.10);
 }
