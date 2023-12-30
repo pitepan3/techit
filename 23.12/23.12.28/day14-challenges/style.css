@@ -5,38 +5,46 @@ body {
     margin: unset;
 }
 
-h1, h2, p, li {
+h1, h2, p, li, a {
     margin: unset;
     font-size: unset;
     font-weight: unset;
+    padding: unset;
 }
 
-ul {
+ul, li {
     padding: unset;
     margin: unset;
     list-style-type: none;
+}
+
+a {
+    text-decoration: unset;
 }
 
 img {
     vertical-align: top;
 }
 
-
-
 /* Layouts */
 .l_wrapper {
-    box-shadow: inset 0 0 20px red;
-    width: 1080px;
-    height: 932px;
+    max-width: 1080px;
+    width: auto;
+    height: 100%;
     margin: 0 auto;
     font-family: "Montserrat";
     position: relative;
     z-index: 1;
+    padding: 0 30px;
 }
+
+.l_col_4_12 {width: 33.3333%;}
+.l_col_6_12 {width: 50%;}
 
 /* ============================== Page.1 ============================== */
 /* Components */
 .pg1 {
+    height: 100%;
     background-color: #6230A2;
 }
 
@@ -102,14 +110,15 @@ img {
 
 .pg1-card {
     display: flex;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    height: 148px;
 }
 
 .pg1-card-main {
     background-color: #FFF;
     width: 100%;
+    padding: 16px;
 }
-
 
 .pg1-card-cover {
     position: relative;
@@ -127,7 +136,7 @@ img {
 
 .pg1-card-cover-img {
     width: 280px;
-    height: 148px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -147,12 +156,11 @@ img {
     font-size: 18px;
     font-weight: 700;
     display: inline-block;
-    padding: 16px 0 2px 20px;
+    padding: 0 0 2px 4px;
 }
 
-.pg1-card-main-contents {
-    list-style-type: circle;
-    margin-left: 46px;
+.pg1-card-main-contents li svg {
+    padding: 0 12px 0 8px;
 }
 
 .pg1-card-main-contents li {
@@ -161,17 +169,32 @@ img {
     font-size: 14px;
 }
 
+@media ( max-width: 1000px ) {
+    .pg1-header::before {
+        width: 0;
+    }
+    .pg1-header {
+        text-align: center;
+        justify-content: center;
+    }
+    .pg1-header-title-sub {
+        margin: 0 0 30px 0;
+    }
+    .pg1-card {
+        height: auto;
+    }
+}
+
 /* ============================== Page.2 ============================== */
 .pg2 {
     background-color: #FFF5ED;
 }
 
 .pg2-header {
-    box-shadow: inset 0 0 20px blue;
     display: flex;
     height: 282px;
-    width: 100%;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .pg2-header-title {
@@ -179,6 +202,19 @@ img {
     font-size: 40px;
     font-weight: 500;
     line-height: 1.1em;
+    position: relative;
+    z-index: 1;
+}
+
+.pg2-header-title-type::after {
+    content: ' ';
+    width: 85%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: -1;
 }
 
 .pg2-header-title-type {
@@ -196,4 +232,124 @@ img {
     background-color: #FF4500;
     border-radius: 4px;
     border-bottom: 4px solid rgba(0, 0, 0, 0.10);
+}
+
+.pg2-main {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin: 0 -15px;
+    padding-bottom: 30px;
+}
+
+.pg2-card {
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.pg2-card-header {
+    border-bottom: 4px solid #111;
+    position: relative;
+}
+
+.pg2-card-header-cover {
+    width: 100%;
+}
+
+.pg2-card-header-cover-point {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.pg2-card-main {
+    padding: 20px;
+    background-color: #FFF;
+}
+
+.pg2-card-main-teg {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #6230A2;
+    font-weight: 600;
+    gap: 10px;
+}
+
+.pg2-card-main-teg li {
+    padding: 2px 12px 3px 12px;
+    background-color: #EBDBFF;
+    border-radius: 12px;
+}
+
+.pg2-card-main-title {
+    color: #111;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 20px 0;
+    min-height: 58px;
+}
+
+.pg2-card-main-discription {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    min-height: 110px;
+}
+
+.pg2-card-footer {
+    background-color: #FFF;
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 22px;
+    position: relative;
+    display: flex;
+    height: 20px;
+    align-items: center;
+}
+
+.pg2-card-footer::before {
+    content: ' ';
+    width: 94%;
+    height: 4px;
+    background-color: #EEE;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pg2-card-footer p {
+    margin-right: auto;
+}
+
+.pg2-card-footer img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid#FFF;
+    border-radius: 15px;
+    margin-left: -10px;
+}
+
+@media ( max-width: 1050px ) {
+    .l_col_4_12 {
+        width: 50%;
+    }
+}
+
+@media ( max-width: 700px ) {
+    .l_col_4_12 {
+        width: 100%;
+    }
+    .pg2-header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .pg2-header-title-sub {
+        margin: 20px auto;
+    }
+    .pg2 {
+        height: 100%;
+    }
 }
