@@ -169,25 +169,40 @@ img {
     font-size: 14px;
 }
 
-@media ( max-width: 1000px ) {
+@media ( max-width: 1080px ) {
     .pg1-header::before {
         width: 0;
     }
     .pg1-header {
         text-align: center;
         justify-content: center;
+        flex-direction: column;
+    }
+    .pg1-header-title {
+        padding: 50px 0;
     }
     .pg1-header-title-sub {
-        margin: 0 0 30px 0;
+        margin: 0 auto 50px auto;
     }
     .pg1-card {
+        display:block;
         height: auto;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .pg1-card-main {
+        box-sizing: border-box;
+    }
+    .pg1-card-cover-img {
+        width: 100%;
     }
 }
 
 /* ============================== Page.2 ============================== */
 .pg2 {
     background-color: #FFF5ED;
+    height: 100%;
+
 }
 
 .pg2-header {
@@ -332,24 +347,25 @@ img {
     margin-left: -10px;
 }
 
-@media ( max-width: 1050px ) {
+@media ( max-width: 1080px ) {
     .l_col_4_12 {
         width: 50%;
     }
 }
 
-@media ( max-width: 700px ) {
+@media ( max-width: 780px ) {
     .l_col_4_12 {
         width: 100%;
     }
     .pg2-header {
         flex-direction: column;
         justify-content: center;
+        text-align: center;
     }
     .pg2-header-title-sub {
         margin: 20px auto;
     }
-    .pg2 {
-        height: 100%;
+    .pg2-header-title-type::after {
+        margin-left: 26px;
     }
 }
