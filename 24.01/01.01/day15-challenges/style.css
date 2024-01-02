@@ -1,0 +1,12 @@
+/* CSS Variables */
+:root {
+	--color-purple:	#a53276;
+	--color-green: #4e9939;
+	--color-orange: #f9761a;
+}
+
+/* Typography */
+:root {
+	font-family: 'Kaushan Script', cursive;
+}
+

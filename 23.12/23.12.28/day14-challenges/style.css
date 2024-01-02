@@ -124,6 +124,7 @@ img {
     position: relative;
     color: #FFF;
     z-index: -1;
+    overflow: hidden;
 }
 
 .pg1-card-cover::after {
@@ -138,6 +139,7 @@ img {
     width: 280px;
     height: 100%;
     object-fit: cover;
+    aspect-ratio: 16 / 9;
 }
 
 .pg1-card-cover-title {
@@ -149,6 +151,8 @@ img {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    
 }
 
 .pg1-card-main-title {
@@ -167,6 +171,12 @@ img {
     color: #111;
     margin-top: 12px;
     font-size: 14px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 17px;
 }
 
 @media ( max-width: 1080px ) {
@@ -202,7 +212,11 @@ img {
 .pg2 {
     background-color: #FFF5ED;
     height: 100%;
+    padding-bottom: 20px;
+}
 
+.pg2-card-shadow {
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10);
 }
 
 .pg2-header {
@@ -221,11 +235,12 @@ img {
     z-index: 1;
 }
 
-.pg2-header-title-type::after {
+.pg2-header-title-type::before {
     content: ' ';
-    width: 85%;
-    height: 20px;
+    width: 100%;
+    height: 26px;
     position: absolute;
+    display: inline-block;
     left: 0;
     bottom: 0;
     background-color: white;
@@ -235,6 +250,8 @@ img {
 .pg2-header-title-type {
     display: block;
     font-weight: 700;
+    position: relative;
+    width: fit-content;
 }
 
 .pg2-header-title-sub {
@@ -246,7 +263,6 @@ img {
     padding: 0 14px 0 14px;
     background-color: #FF4500;
     border-radius: 4px;
-    border-bottom: 4px solid rgba(0, 0, 0, 0.10);
 }
 
 .pg2-main {
@@ -269,6 +285,7 @@ img {
 
 .pg2-card-header-cover {
     width: 100%;
+    aspect-ratio: 4 / 3;
 }
 
 .pg2-card-header-cover-point {
@@ -310,7 +327,12 @@ img {
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    min-height: 110px;
+    height: 110px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .pg2-card-footer {
@@ -318,11 +340,12 @@ img {
     color: #999;
     font-size: 14px;
     font-weight: 400;
-    padding: 22px;
+    padding: 10px 22px 10px 22px;
     position: relative;
     display: flex;
-    height: 20px;
+    min-height: 32px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .pg2-card-footer::before {
