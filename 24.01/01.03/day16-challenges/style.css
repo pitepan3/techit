@@ -1,3 +1,19 @@
+/* Resets */
+body {
+	margin: unset;
+}
+
+/* Layouts */
+.l_wrapper {
+	box-shadow: inset 0 0 20px red;
+	width: 1080px;
+	display: flex;
+	min-height: 600px;
+	margin: 150px auto auto auto;
+	transform: rotate(4deg);
+}
+
+
 /* CSS Variables */
 :root {
 	--color-purple:	#a53276;
@@ -10,3 +26,94 @@
 	font-family: 'Kaushan Script', cursive;
 }
 
+/* Components */
+.l_col {
+	width: 33.3333%;
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.card-1 {
+	background-image: url(images/dracula-bg.png);
+	background-color: var(--color-green);
+}
+
+.card-1-cover {
+	width: 200px;
+	margin-right: 100px;
+}
+
+.card-1-title {
+	font-size: 70px;
+	font-weight: 700;
+	margin-right: -300px;
+}
+
+.card-2 {
+	background-image: url(images/franken-bg.png);
+	background-color: var(--color-orange);
+}
+
+.card-2-cover {
+	width: 200px;
+	margin-left: 200px;
+}
+
+.card-2-title {
+	font-size: 70px;
+	font-weight: 700;
+	margin-right: -200px;
+}
+
+.card-3 {
+	background-image: url(images/wicked-bg.png);
+	background-color: var(--color-purple);
+}
+
+.card-3-cover {
+	width: 200px;
+	margin-left: 100px;
+}
+
+.card-3-title {
+	font-size: 70px;
+	font-weight: 700;
+	margin-left: -260px;
+}
+
+.card-1-cover:hover {
+	scale: 2;
+	transition: 1s;
+	margin-left: -300px;
+	overflow: unset;
+}
+
+.card-1:hover {
+	width: 70%;
+	transition: 1s;
+}
+
+.card-2-cover:hover {
+	scale: 2;
+	transition: 1s;
+	margin-left: -300px;
+}
+
+.card-2:hover {
+	width: 70%;
+	transition: 1s;
+}
+
+.card-3-cover:hover {
+	scale: 2;
+	transition: 1s;
+	margin-left: -50px;
+}
+
+.card-3:hover {
+	width: 70%;
+	transition: 1s;
+}
