@@ -1,0 +1,88 @@
+/* Resets */
+body {
+    margin: unset;
+}
+
+h1, h2, p {
+    margin: unset;
+    font-size: unset;
+    font-weight: unset;
+}
+
+img {
+    vertical-align: top;
+}
+
+/* Layouts */
+.l_wrapper {
+    max-width: 1080px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.l_row {
+    display: flex;
+}
+
+.l_col {
+    width: 33.3333%;
+}
+
+/* Variables */
+:root {
+    --color-purple-rgb: 10 10 10;
+
+    --color-purple: rgb(var(--color-purple-rgb));
+}
+/* Components */
+body {
+    background-color: black;
+
+}.header-title {
+    font-size: 40px;
+    font-weight: 700;
+    color: #666;
+    border-bottom: 8px solid #666;
+    display: inline-block;
+    line-height: 1.4em;
+    letter-spacing: 0.4em;
+    margin: 20px 0;
+}
+
+.card {
+    height: 600px;
+}
+
+.card-cover {
+    background-image: url(images/bg-cookie.png);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    opacity: .8;
+}
+
+.cake {
+    background-image: url(images/bg-cake.png);
+}
+
+.crepe {
+    background-image: url(images/bg-crepe.png);
+}
+
+.card-contents {
+    margin-top: auto;
+    padding: 20px;
+    background-color: rgb( var(--color-purple-rgb) / .9 );
+    color: gray;
+    margin: auto 30px 40px 30px;
+    border-radius: 20px;
+}
+
+.card-contents-title {
+    padding-bottom: 20px;
+    color: orangered;
+    font-size: 26px;
+    font-weight: 600;
+}

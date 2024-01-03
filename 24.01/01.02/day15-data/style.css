@@ -1,0 +1,285 @@
+/* Resets */
+img {
+    max-width: 50px;
+}  
+
+/* CSS Keyframes */
+@keyframes fly {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes bounds {
+    0% {
+        transform: translate(-50%,-50%) scale(0.8) rotate(0);
+    }
+    100% {
+        transform: translate(-50%,-50%) scale(1.2) rotateY(180deg);
+    }
+}
+
+@keyframes itsbbultime {
+    100% {
+        background-position-x: 100px;
+    }
+}
+
+@keyframes dance {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotateX(180deg);
+    }  
+}
+
+/* CSS Variables */
+:root {
+    --color-primary: #e28bb1;
+    --color-primary-light: #e8a7c5;
+    --color-green: #79bf87;
+
+    --color-gray: #dadbde;
+    --color-blue: #39609d;
+}
+
+:root.fly {
+    --color-primary: red;
+    --color-primary-light: brown;
+    --color-green: green;
+
+    --color-gray: #333;
+    --color-blue: #336699;
+}
+
+
+
+/* Components */
+body {
+    background-color: #222;
+}
+
+.monster {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* animation-name: bounds;
+    animation-duration: 1s;  */
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.monster-head {
+    background-color: var(--color-primary-light);
+    width: 100px;
+    height: 100px;
+    border-radius: 50px 50px 50px 50px;
+    margin: 0 auto;
+    transform: translateY(30%);
+}
+
+.monster-body {
+    background-color: var(--color-primary);
+    width: 120px;
+    height: 120px;
+    border-radius: 20px 20px 60px 60px;
+    position: relative;
+    z-index: -1;
+}
+
+.monster-body::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 20px auto;
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-gray);
+    border-radius: 20px 20px 30px 30px;
+}
+
+.bbuls {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -26px;
+}
+
+.bbuls-item {
+    width: 30px;
+    height: 50px;
+    background-color: white;
+    border-radius: 0 0 0 20px;
+    background-image: linear-gradient(
+        90deg, /* 그라디언트 각도 */
+        var(--color-green) 50%, /* 첫 번째 색상 시작 및 끝 */
+        rgb(0 0 0 / .2) 50%, 
+        var(--color-green) 50%,
+        rgb(0 0 0 / .2) 50%
+    );
+    background-size: 10px 10px; /* 줄무늬 크기 */
+
+    animation-name: itsbbultime;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.bbuls-item::before {
+    content: ' ';
+    width: 30px;
+    height: 30px;
+    background-color: #222;
+    display: block;
+    border-radius: 0 0 0 20px;
+}
+
+.bbuls-item.type_right {
+    transform: rotateY(180deg);
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    margin-top: -14px;
+    border-top: 4px solid rgb(0 0 0 / .1);
+    border-radius: 20px 20px 0 0;
+}
+
+.eye {
+    background-color: var(--color-blue);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 6px var(--color-gray);
+    position: relative;
+}
+
+.eye:nth-child(2) {
+    transform: translateY(-10px);
+}
+
+
+
+.eye::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 4px;
+    width: 5px;
+    height: 5px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.mouth {
+    width: 50px;
+    margin: 0 auto;
+}
+
+.wing {
+    position: absolute;
+    top: 0;
+    margin-top: 20px;
+    width: 30px;
+    height: 60px;
+    background-color: var(--color-primary-light);
+    transform: rotateY(0);
+    border-bottom: 4px solid rgb(0 0 0 / .5);
+
+    animation-name: fly;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+:root.fastgogo .wing {
+    animation-duration: .02s;
+}
+
+.monster:hover .wing {
+    transform: rotateY(180deg);
+}
+
+.wing.type_left {
+    left: 0;
+    border-radius: 0 20px 0 20px;
+    transform-origin: left top;
+}
+
+.wing.type_right {
+    right: 0;
+    border-radius: 20px 0 20px 0;
+    transform-origin: right top;
+}
+
+.arm.type_left_row {
+    background-color: var(--color-primary);
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    margin-left: -60px;
+}
+
+.arm.type_right_row {
+    background-color: var(--color-primary);
+    width: 80px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    margin-right: -60px;
+}
+
+.arm.type_left_col {
+    background-color: var(--color-primary);
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: -39px;
+    z-index: 9999;
+    margin-left: -60px;
+    animation-name: dance;
+    transform-origin: right bottom;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+.arm.type_right_col {
+    background-color: var(--color-primary);
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    margin-right: -60px;
+    top: 19px;
+    animation-name: dance;
+    transform-origin: right top;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+
