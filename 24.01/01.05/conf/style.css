@@ -1,0 +1,141 @@
+/* Resets */
+body {
+    margin: unset;
+}
+
+h1, h2, p {
+    margin: unset;
+    font-size: unset;
+    font-weight: unset;
+}
+
+button {
+    all: unset;
+}
+
+/* color */
+:root {
+    --color-white: #FFF;
+
+    --color-green: #65FFBA;
+
+    --color-orange: #FF9364;
+
+    --color-blue-90: #000069;
+    --color-blue-80: #00008C;
+    --color-blue-60: #0000CD;
+    --color-blue-40: #5050FF;
+}
+
+/* Components */
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.cs {
+    width: 100%;
+    max-width: 1200px;
+    max-height: 800px;
+    flex-grow: 1;
+    margin: auto;
+    display: flex;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* ============================== sidebar ============================== */
+
+.sidebar {
+    background-color: var(--color-blue-90);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px 0 0 20px;
+}
+
+.sidebar .title {
+    color: var(--color-green);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.type_orange {
+    color: var(--color-orange);
+}
+
+.sidebar .description {
+    margin-bottom: auto;
+    color: var(--color-blue-40);
+}
+
+.sidebar .sidebar-btn {
+    position: relative;
+    background-color: #5050FF;
+    width: fit-content;
+    padding: 4px 40px 6px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.sidebar-btn::after {
+    content: ' ';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    background-image: url(images/arrow.svg);
+}
+
+/* ============================== sidebar ============================== */
+
+.main {
+    box-shadow: inset 0 0 20px gold;
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-blue-40);
+    position: relative;
+}
+
+.main .header::before {
+    content: ' ';
+    background-color: var(--color-blue-40);
+    height: 10px;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+}
+
+.main .header .title {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.scroll {
+    flex-grow: 1;
+    overflow: scroll;
+}
+
+.main .contents {
+    box-shadow: inset 0 0 20px blue;
+    margin-top: 40px;
+    height: 150px;
+}
+
