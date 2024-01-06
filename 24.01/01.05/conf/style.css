@@ -1,0 +1,268 @@
+/* Resets */
+body {
+    margin: unset;
+}
+
+h1, h2, p {
+    font-size: unset;
+    font-weight: unset;
+    margin: unset;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    all: unset;
+}
+
+/* Layouts */
+.l_wrapper {
+    max-width: 1200px;
+    width: auto;
+    height: 700px;
+    margin: 200px auto 0 auto;
+    padding: 0 30px 0 30px;
+}
+
+/* Typography */
+:root {
+    --color-gray-10: #999;
+    --color-gray-60: #666;
+    --color-gray-90: #333;
+
+    --color-green: #64DB99;
+
+    --color-orange: #FF7F50;
+
+    --color-blue-30: #9696FF;
+    --color-blue-40: #50508C;
+    --color-blue-60: #28288C;
+    --color-blue-90: #000069;
+    --color-blue-100: #000060;
+}
+
+/* Components */
+body {
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.cs {
+    background-color: var(--color-blue-60);
+    display: flex;
+    height: auto;
+    border-radius: 30px;
+    flex-wrap: wrap;
+}
+
+.cs-sidebar {
+    width: 300px;
+    position: relative;
+    /* height: 100%; */
+}
+
+.cs-sidebar .title {
+    padding: 30px 40px 30px 30px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1em;
+    color: var(--color-green);
+}
+
+.cs-sidebar .title .type_orange {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--color-orange);
+}
+
+.cs-sidebar .description {
+    color: var(--color-blue-30);
+    font-weight: 600;
+    font-size: 18px;
+    padding-left: 30px;
+}
+
+.cs-sidebar .footer {
+    background-color: var(--color-blue-40);
+    color: white;
+    padding: 8px 12px 10px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 4%;
+    left: 10%;
+    display: flex;
+    gap: 10px;
+}
+
+.btn_type {
+    width: 30px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.cs-main {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 40px 30px 0 20px;
+}
+
+.cs-main .scroll {
+    overflow-y: scroll;
+    height: 580px;
+}
+
+.cs-main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-blue-30);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.cs-main .header::before {
+    content: ' ';
+    background-color: var(--color-blue-30);
+    border-radius: 6px;
+    position: absolute;
+    height: 10px;
+    bottom: -16px;
+    left: 0;
+    right: 0;
+}
+
+.cs-main .header .title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cs-main .header .title-sub {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.contents {
+    display: flex;
+    width: auto;
+    height: 150px;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.lunch {
+    color: var(--color-orange);
+    font-size: 30px;
+}
+
+.contents .time {
+    color: var(--color-blue-30);
+    padding: 56px 30px;
+    border-radius: 12px;
+    letter-spacing: 0.2em;
+}
+
+.cs-main .contents br {
+    display: none;
+}
+
+.contents .src {
+    width: 80px;
+    height: 80px;
+    border-radius: 0 30px 30px 0;
+}
+
+.contents .description {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.contents .description .name {
+    color: var(--color-orange);
+    position: relative;
+}
+
+.contents .description .name .job {
+    color: var(--color-blue-30);
+    margin-left: 16px;
+}
+
+.contents .description .name::before {
+    content: ' ';
+    position: absolute;
+    background-color: var(--color-blue-30);
+    width: 6px;
+    height: 6px;
+    left: 42px;
+    top: 10px;
+    border-radius: 50%;
+}
+
+.contents .introduce {
+    color: var(--color-green);
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cs-main .contents:nth-child(odd) {
+    background-color: var(--color-blue-90);
+}
+
+@media (max-width: 1200px) {
+    .l_wrapper {
+        margin-top: 60px;
+    }
+
+    .cs {
+        display: grid;
+    }
+
+    .cs-sidebar {
+        width: 100%;
+    }
+
+    .footer.footer.footer.footer {
+        bottom: 70%;
+        left: 86%;
+    }
+
+    .cs-main .scroll {
+        height: 860px;
+    }
+
+    .cs-sidebar .description_type {
+        display: none;
+    }
+
+    .contents .time {
+    }
+}
+
+@media (max-width: 900px) {
+    .cs-main .contents:nth-child(even) {
+        background-color: var(--color-blue-90);
+    }
+    .contents .src {
+        display: none;
+    }
+
+    .cs-main .contents br {
+        display: block;
+    }
+
+    .contents .time {
+        text-align: center;
+        padding: 30px 20px;
+        background-color: var(--color-blue-100);
+
+    }
+}
