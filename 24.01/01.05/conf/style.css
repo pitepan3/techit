@@ -52,6 +52,7 @@ body {
     width: 100%;
     max-width: 1200px;
     max-height: 800px;
+    height: 100%;
     flex-grow: 1;
     margin: auto;
     display: flex;
@@ -123,6 +124,7 @@ body {
     justify-content: space-between;
     color: var(--color-blue-40);
     position: relative;
+    height: 60px;
 }
 
 .main .header::before {
@@ -142,22 +144,20 @@ body {
 }
 
 .main .scroll {
-    max-height: 600px;
     flex-grow: 1;
     margin-top: 30px;
-    position: relative;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .main .scroll .list {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 120px;
     display: flex;
     align-items: center;
     background-color: #000069;
     border-radius: 12px;
+    flex-grow: 1;
 }
 
 .main .scroll .list:nth-child(even) {
@@ -172,7 +172,6 @@ body {
 
 .list-img {
     width: 80px;
-    height: 80px;
     border-radius: 0 50px 50px 0;
     padding: 0 20px;
 }
@@ -210,14 +209,14 @@ body {
     font-size: 18px;
 }
 
-.main .scroll .list.type-1 {top: 0;}
+/* .main .scroll .list.type-1 {top: 0;}
 .main .scroll .list.type-2 {top: 150px;}
 .main .scroll .list.type-3 {top: 300px;}
 .main .scroll .list.type-4 {top: 450px;}
 .main .scroll .list.type-5 {top: 600px;}
 .main .scroll .list.type-6 {top: 750px;}
 .main .scroll .list.type-7 {top: 900px;}
-.main .scroll .list.type-8 {top: 1050px;}
+.main .scroll .list.type-8 {top: 1050px;} */
 
 ::-webkit-scrollbar {
     width: 6px;
