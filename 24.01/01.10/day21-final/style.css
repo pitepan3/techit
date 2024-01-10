@@ -1,5 +1,7 @@
 /* Resets */
-body, p, ul {
+body,
+p,
+ul {
 	margin: unset;
 	padding: unset;
 }
@@ -8,7 +10,8 @@ li {
 	list-style-type: none;
 }
 
-h1, h2 {
+h1,
+h2 {
 	margin: unset;
 	font-size: unset;
 	font-weight: unset;
@@ -17,6 +20,10 @@ h1, h2 {
 hr,
 button {
 	all: unset;
+}
+
+img {
+	vertical-align: top;
 }
 
 /* Typography */
@@ -40,8 +47,8 @@ button {
 
 /* Layouts */
 .l_row {
-	display: grid; 
-	grid-template-columns: repeat( 12, 1fr ); 
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
 	gap: 18px;
 }
 
@@ -49,25 +56,60 @@ button {
 	gap: 4px;
 }
 
-.l_col_12_12 { grid-column: auto / span 12; }
-.l_col_11_12 { grid-column: auto / span 11; }
-.l_col_10_12 { grid-column: auto / span 10; }
-.l_col_9_12  { grid-column: auto / span 9; }
-.l_col_8_12  { grid-column: auto / span 8; }
-.l_col_7_12  { grid-column: auto / span 7; }
-.l_col_6_12  { grid-column: auto / span 6; }
-.l_col_5_12  { grid-column: auto / span 5; }
-.l_col_4_12  { grid-column: auto / span 4; }
-.l_col_3_12  { grid-column: auto / span 3; }
-.l_col_2_12  { grid-column: auto / span 2; }
-.l_col_1_12  { grid-column: auto / span 1; }
+.l_col_12_12 {
+	grid-column: auto / span 12;
+}
+
+.l_col_11_12 {
+	grid-column: auto / span 11;
+}
+
+.l_col_10_12 {
+	grid-column: auto / span 10;
+}
+
+.l_col_9_12 {
+	grid-column: auto / span 9;
+}
+
+.l_col_8_12 {
+	grid-column: auto / span 8;
+}
+
+.l_col_7_12 {
+	grid-column: auto / span 7;
+}
+
+.l_col_6_12 {
+	grid-column: auto / span 6;
+}
+
+.l_col_5_12 {
+	grid-column: auto / span 5;
+}
+
+.l_col_4_12 {
+	grid-column: auto / span 4;
+}
+
+.l_col_3_12 {
+	grid-column: auto / span 3;
+}
+
+.l_col_2_12 {
+	grid-column: auto / span 2;
+}
+
+.l_col_1_12 {
+	grid-column: auto / span 1;
+}
 
 
 /* Commons */
 /* 스크롤바 커스텀 시작 */
 ::-webkit-scrollbar {
-    width: 20px;
-    height: 20px;
+	width: 20px;
+	height: 20px;
 }
 
 /* 스크롤바 핸들 */
@@ -235,7 +277,8 @@ body {
 
 .paper-title h1 {
 	font-size: 28px;
-	font-weight: 700;;
+	font-weight: 700;
+	;
 }
 
 .paper-title p {
@@ -255,11 +298,11 @@ body {
 }
 
 .paper-board {
-	margin: 40px 0;
+	margin: 30px 0;
 }
 
 .paper-board-header {
-	height: 60px;
+	padding-bottom: 12px;
 	display: flex;
 	gap: 12px;
 	align-items: center;
@@ -315,6 +358,37 @@ body {
 
 /* 임시 코드 */
 .card {
-	background-color: var(--color-gray-10);
-	aspect-ratio: 12 / 16;
+	width: 350px;
+}
+
+.cover-src {
+	width: 350px;
+	height: 240px;
+	object-fit: cover;
+}
+
+.card-title {
+	display: flex;
+	justify-content: space-between;
+	padding: 16px 0;
+	font-size: 20px;
+	font-weight: 700;
+	color: #333;
+}
+
+.card-description {
+	color: #999;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.footer-btn {
+	background-color: #F4F4F4;
+	color: #666;
+	font-size: 14px;
+	padding: 12px 8px;
+	display: flex;
+	gap: 10px;
+	border-radius: 24px;
+	margin-top: 30px;
 }
