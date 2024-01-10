@@ -1,0 +1,17 @@
+body {
+    margin: unset;
+}
+
+.wrapper {
+    box-shadow: inset 0 0 20px red;
+    height: 100vh;
+    display: flex;
+}
+
+.container {
+    box-shadow: inset 0 0 20px blue;
+    width: 100%;
+    max-width: 960px;
+    height: 600px;
+    margin: auto;
+}

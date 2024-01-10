@@ -98,7 +98,7 @@ body {
         height: auto;
     }
     .box-side {
-        width: 100%;
+        width: unset;
         flex-direction: row;
         margin-bottom: 12px;
     }
