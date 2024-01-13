@@ -4,6 +4,7 @@ body, hr {
 }
 
 h1, p {
+    padding: unset;
     margin: unset;
     font-size: unset;
     font-weight: unset;
@@ -59,6 +60,8 @@ textarea {
     --color-gray-10: #999;
 
     --color-blue: #7176FF;
+
+    --color-red: #FF6A6A;
 }
 
 
@@ -209,7 +212,7 @@ textarea {
 
 /* ==================== Modal ==================== */
 .modal {
-    opacity: 1;
+    opacity: 0;
     background-color: rgba(34, 34, 34, 0.80);
     position: absolute;
     inset: 0;
@@ -236,6 +239,7 @@ textarea {
     margin: auto;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .modal-header {
@@ -262,12 +266,12 @@ textarea {
 }
 
 .modal-main {
-    box-shadow: inset 0 0 20px red;
     display: flex;
     flex-direction: column;
     gap: 10px;
     height: 100%;
-    max-height: 390px;
+    max-height: 600px;
+    overflow: auto;
 }
 
 .modal-main .profile {
@@ -302,14 +306,13 @@ textarea {
     background-image: url(images/modal-image/cat.png);
     background-repeat: no-repeat;
     background-position: bottom;
-    width: 100%;
-    max-width: 760px;
-    height: 230px;
-    margin: 0 20px;
+    aspect-ratio: 76/43;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     position: relative;
     border-radius: 12px;
+    flex-shrink: 0;
 }
 
 .modal-main .contents-cover .left {
@@ -339,9 +342,99 @@ textarea {
 
 
 
-.modal-main .comment {
-    box-shadow: inset 0 0 20px blue;
+.modal-main .comment-area {
+    padding: 0 20px;
 }
+
+.first-comment {
+    display: flex;
+}
+
+.first-comment-src {
+    width: 60px;
+    height: 60px;
+}
+
+.first-comment-contents {
+    width: 100%;
+}
+
+.first-comment-contents p {
+    font-weight: 700;
+    padding: 10px;
+}
+
+.first-comment-contents .type_gray {
+    color: var(--color-gray-10);
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 6px;
+}
+
+.first-comment-contents .comment {
+    background-color: #F4F4F4;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.first-comment-contents .comment p {
+    color: var(--color-black-70);
+    font-weight: 500;
+}
+
+.comment .comment-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.comment .comment-img .up{
+    width: 12px;
+    height: 12px;
+    padding: 6px 12px;
+    background-color: var(--color-blue);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment .comment-img .middle{
+    font-size: 12px;
+    color: var(--color-blue);
+    padding: 6px 12px;
+    background-color: #FFF;
+    border-radius: 4px;
+}
+
+.comment .comment-img .down {
+    width: 12px;
+    height: 12px;
+    padding: 6px 12px;
+    background-color: #FFF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.first-comment-contents .comment-review {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    padding: 6px 0 0 14px;
+}
+
+.first-comment-contents .comment-review img {
+    width: 12px;
+    height: 12px;
+}
+
+.first-comment-contents .comment-review p {
+    color: var(--color-black-70);
+    font-size: 14px;
+    font-weight: 500;
+}
+
 
 
 
@@ -349,7 +442,6 @@ textarea {
     background-color: #EEE;
     padding: 10px;
     margin-top: auto;
-    box-shadow: inset 0 0 20px red;
     height: 100%;
     max-height: 140px;
     display: flex;
@@ -380,13 +472,48 @@ textarea {
 
 .modal-footer .main-bottom p {
     padding-left: 18px;
+    margin-right: auto;
+}
+
+.modal-footer .main-bottom .type_red {
+    color: var(--color-red);
+}
+
+.modal-footer .main-bottom img {
+    border-radius: 10px;
 }
 
 .modal-footer .main-bottom .smile {
     background-color: #CCC;
+    padding: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
 }
 
 .modal-footer .main-bottom .clip {
     background-color: #CCC;
+    padding: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.modal-footer .main-bottom hr {
+    width: 1px;
+    height: 12px;
+    background-color: #DDD;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+.modal-footer .main-bottom .cursor-blue {
+    width: 20px;
+    height: 20px;
+    background-color: #2CBAF7;
+    padding: 5px;
+    border-radius: 16px 4px 16px 16px;
+    margin-right: 4px;
 }
 /* ==================== Modal ==================== */
