@@ -4,6 +4,7 @@
 <head>
 	<title>COMMUNITY</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="modal.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
@@ -191,11 +192,42 @@
 									<button class="down" type="button"><img src="images/modal-image/down.svg"></button>
 								</div>
 							</div>
-							<div class="comment-review">
-								<img src="images/modal-image/star.svg">
+							<div class="comment-first-review">
+								<button type="button"><img src="images/modal-image/star.svg"></button>
 								<p>답변하기</p>
-								<img src="images/modal-image/hart.svg">
+								<button type="button"><img src="images/modal-image/hart.svg"></button>
 								<p>좋아요</p>
+							</div>
+							<div class="comment-second-review">
+								<img class="second-review-src" src="images/main-image/list-cover01.png">
+								<div class="second-review-contents">
+									<p>짬뽕이 <span class="type_gray">2분 전</span></p>
+									<div class="second-review-main">
+										<div class="review">
+											<p class="review-contents">
+												자바스크립트도 굉장히 흥미로울 것 같아요!<br>
+												남은 기간도 파이팅입니다잇!
+											</p>
+											<div class="review-footer">
+												<button type="button"><img src="images/modal-image/star.svg"></button>
+												<p class="like">답변하기</p>
+												<button type="button"><img src="images/modal-image/hart.svg"></button>
+												<p class="like">좋아요</p>
+											</div>
+										</div>
+										<div class="comment-text-area">
+											<img class="src" src="images/modal-image/css.png">
+											<form class="form" action="">
+												<fieldset>
+													<div class="input">
+														<textarea rows="2" placeholder="질문에 대한 답변을 남겨 주세요."></textarea>
+													</div>
+												</fieldset>
+												<button type="button"><img src="images/modal-image/cursor-gray.svg"></button>
+											</form>
+										</div>
+									</div>
+								</div>
 							</div>
 					</section>
 				</div>
@@ -212,10 +244,10 @@
 					</form>
 					<div class="main-bottom">
 						<p><span class="type_red">1004</span>/1000</p>
-						<img class="smile" src="images/modal-image/smile.svg">
-						<img class="clip" src="images/modal-image/clip.svg">
+						<button type="button"><img class="smile" src="images/modal-image/smile.svg"></button>
+						<button type="button"><img class="clip" src="images/modal-image/clip.svg"></button>
 						<hr>
-						<img class="cursor-blue" src="images/modal-image/cursor.svg">
+						<button type="button"><img class="cursor-blue" src="images/modal-image/cursor.svg"></button>
 					</div>
 				</div>
 			</div>

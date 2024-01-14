@@ -1,0 +1,450 @@
+/* Resets */
+body, hr {
+    margin: unset;
+}
+
+h1, p {
+    padding: unset;
+    margin: unset;
+    font-size: unset;
+    font-weight: unset;
+}
+
+img {
+    vertical-align: top;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+fieldset,
+legend {
+	all: unset;
+	display: block;
+	inline-size: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+	all: unset;
+	display: block;
+	inline-size: 100%;
+	height: 48px;
+	line-height: 48px;
+	padding: 0 12px;
+	box-sizing: border-box;
+}
+
+textarea {
+	all: unset;
+	display: block;
+	inline-size: 100%;
+	line-height: 1.6;
+	padding: 12px;
+	box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --color-black-100: #000;
+    --color-black-70: #333;
+
+    --color-gray-40: #666;
+    --color-gray-10: #999;
+
+    --color-blue: #7176FF;
+
+    --color-red: #FF6A6A;
+}
+
+
+/* ==================== Modal ==================== */
+.modal {
+    opacity: 0;
+    background-color: rgba(34, 34, 34, 0.80);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    padding: 60px;
+    box-sizing: border-box;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.modal.is_active {
+	opacity: 1;
+	/* 모달이 떴을때 마우스 이벤트 먹을 수 있도록 */
+	pointer-events: unset;
+}
+
+.modal-inside {
+    background-color: #FFF;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    /* max-height: 830px; */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-header {
+    display: flex;
+    max-height: 80px;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.modal-header .title {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 22px;
+}
+
+.modal-header .btn {
+    width: 14px;
+    height: 14px;
+    padding: 32px;
+    border-left: 2px solid#D9D9D9;
+    cursor: pointer;
+}
+
+.modal-main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    max-height: 600px;
+    overflow: auto;
+}
+
+.modal-main .profile {
+    padding: 14px 0 0 14px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    gap: 12px;
+    line-height: 1.2em;
+}
+
+.modal-main .profile .src {
+    width: 60px;
+    height: 60px;
+}
+
+.modal-main .profile .name .type_gray {
+    font-size: 14px;
+    color: var(--color-gray-10);
+    font-weight: 500;
+}
+
+.modal-main .contents {
+    color: var(--color-black-70);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 0 8px 20px;
+}
+
+.modal-main .contents-cover {
+    background-image: url(images/modal-image/cat.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    aspect-ratio: 76/43;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.modal-main .contents-cover .left {
+    position: absolute;
+    left: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    padding: 14px;
+    background-color: #FFF;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.modal-main .contents-cover .right {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    padding: 14px;
+    background-color: #FFF;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+.modal-main .comment-area {
+    padding: 0 20px;
+}
+
+.first-comment {
+    display: flex;
+}
+
+.first-comment-src {
+    width: 60px;
+    height: 60px;
+}
+
+.first-comment-contents {
+    width: 100%;
+}
+
+.first-comment-contents p {
+    font-weight: 700;
+    padding: 4px;
+}
+
+.first-comment-contents .type_gray {
+    color: var(--color-gray-10);
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 6px;
+}
+
+.first-comment-contents .comment {
+    background-color: #F4F4F4;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.first-comment-contents .comment p {
+    color: var(--color-black-70);
+    font-weight: 500;
+}
+
+.comment .comment-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.comment .comment-img .up{
+    width: 12px;
+    height: 12px;
+    padding: 6px 12px;
+    background-color: var(--color-blue);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.comment .comment-img .middle{
+    font-size: 12px;
+    color: var(--color-blue);
+    padding: 6px 12px;
+    background-color: #FFF;
+    border-radius: 4px;
+}
+
+.comment .comment-img .down {
+    width: 12px;
+    height: 12px;
+    padding: 6px 12px;
+    background-color: #FFF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.first-comment-contents .comment-first-review {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    padding: 6px 0 0 14px;
+}
+
+.first-comment-contents .comment-first-review button {
+    width: 12px;
+    height: 12px;
+}
+
+.first-comment-contents .comment-first-review p {
+    color: var(--color-black-70);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.first-comment-contents .comment-second-review {
+    margin: 12px 0 12px 12px;
+    padding-left: 12px;
+    border-left: 3px solid #EEE;
+    height: 220px;
+    display: flex;
+}
+
+.second-review-src {
+    width: 40px;
+    height: 40px;
+}
+
+.second-review-contents {
+    font-weight: 700;
+    width: 100%;
+}
+
+.second-review-main .review .review-contents {
+    padding: 10px;
+}
+
+.second-review-contents .type_gray {
+    color: var(--color-gray-10);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.second-review-main {
+    color: var(--color-black-70);
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.second-review-main .review p {
+    line-height: normal;
+    background-color: #F4F4F4;
+    border-radius: 6px;
+}
+
+.modal-footer {
+    background-color: #EEE;
+    padding: 10px;
+    margin-top: auto;
+    height: 100%;
+    max-height: 140px;
+    display: flex;
+}
+
+.second-review-main .review-footer {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+}
+
+.second-review-main .review-footer .like {
+    padding: unset;
+    background-color: #FFF;
+    padding: 0 14px 0 4px;
+    font-weight: 500;
+}
+
+.second-review-main .review-footer button {
+    width: 12px;
+    height: 12px;
+}
+
+.second-review-main .comment-text-area {
+    display: flex;
+}
+
+.second-review-main .comment-text-area .src {
+    width: 40px;
+    height: 40px;
+}
+
+.second-review-main .comment-text-area .form {
+    width: 100%;
+    position: relative;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+}
+
+.second-review-main .comment-text-area .form img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 8px;
+}
+
+.modal-footer .src {
+    margin-right: 6px;
+    width: 60px;
+    height: 60px;
+}
+
+.modal-footer .main {
+    background-color: #FFF;
+    border: 1px solid #AAA;
+    border-radius: 18px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-footer .main-bottom {
+    border-top: 1px solid #DDD;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.modal-footer .main-bottom p {
+    padding-left: 18px;
+    margin-right: auto;
+}
+
+.modal-footer .main-bottom .type_red {
+    color: var(--color-red);
+}
+
+.modal-footer .main-bottom img {
+    border-radius: 10px;
+}
+
+.modal-footer .main-bottom .smile {
+    background-color: #CCC;
+    padding: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.modal-footer .main-bottom .clip {
+    background-color: #CCC;
+    padding: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.modal-footer .main-bottom hr {
+    width: 1px;
+    height: 12px;
+    background-color: #DDD;
+    border-radius: 4px;
+    margin: 0 10px;
+}
+
+.modal-footer .main-bottom .cursor-blue {
+    width: 20px;
+    height: 20px;
+    background-color: #2CBAF7;
+    padding: 5px;
+    border-radius: 16px 4px 16px 16px;
+    margin-right: 4px;
+}
+/* ==================== Modal ==================== */
