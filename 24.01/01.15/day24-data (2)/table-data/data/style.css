@@ -1,0 +1,49 @@
+body {
+    margin: unset;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: unset;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table th, 
+table td {
+    padding: 0;
+}
+
+:root {
+    word-break: keep-all;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+body {
+    background-color: #eee;
+}
+
+
+.scroll {
+    overflow: auto;
+}
+
+
+.table {
+    min-width: 600px;
+}
+
+.table th,
+.table td {
+    border: 1px solid #999;
+    padding: 10px;
+}
+
+.table colgroup col.type_spotlight {
+    background-color: seashell;
+}

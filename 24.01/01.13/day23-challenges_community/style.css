@@ -1,5 +1,5 @@
 /* Resets */
-body, hr {
+body {
     margin: unset;
 }
 
@@ -14,7 +14,7 @@ img {
     vertical-align: top;
 }
 
-button {
+button, hr {
     all: unset;
 }
 

@@ -1,0 +1,68 @@
+/* CSS Resets */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: unset;
+
+    table-layout: fixed;
+}
+
+caption {
+    text-align: unset;
+}
+
+table th,
+table td {
+    font-weight: unset;
+    text-align: unset;
+}
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Components */
+body {
+    background-color: #ddd;
+}
+
+.table {
+    background-color: #efefef;
+}
+
+.table .col {
+    width: 140px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    padding: 0 20px;
+    height: 60px;
+    border-bottom: 1px solid #999;
+}
+
+.table td:not(:first-child) {
+    border-left: 1px solid #999;
+}
+
+.table thead {
+    background-color: white;
+    box-shadow: 0 -2px 0 0 #000;
+    font-weight: 700;
+    position: sticky;
+    top: 0;
+}
+
+.table tfoot {
+    position: sticky;
+    bottom: 0;
+    background-color: seashell;
+}
+
+.table-caption {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
